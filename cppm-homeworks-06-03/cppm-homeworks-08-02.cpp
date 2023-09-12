@@ -13,26 +13,43 @@
 #include "Square.h"
 #include "Romb.h"
 
-
+//выводит информацию об экземпляре
 void print_info(Figure* adress) {
 
     adress->get_info();
-    std::cout << std::endl;
+    //std::cout << std::endl;
 
 }
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-    Triangle triangle_0(10, 20, 30, 50, 60, 70);
-    Triangle_C_90 triangle_1(10, 20, 30, 50, 60);
-    Triangle_bedra_ravny triangle_2(10, 20, 50, 60);
-    Triangle_all_sides_equal triangle_3(30);
+    try {
+        Triangle triangle_0(10, 20, 30, 50, 60, 70);
+        print_info(&triangle_0);
+    }
+    catch (FigureExceptions& er) {
+        std::cout << "Ошибка создания фигуры. Причина: " << er.what() << std::endl;
+    }
+
+
+    try {
+        Romb quadrangle_4(40, 40, 40, 4, 30, 150, 30, 150);
+        print_info(&quadrangle_4);
+    }
+    catch (FigureExceptions& er) {
+        std::cout << "Ошибка создания фигуры. Причина: " << er.what() << std::endl;
+    }
+
+    /*
+     Triangle_C_90 triangle_1(10, 20, 30, 50, 60,70);
+    Triangle_bedra_ravny triangle_2(10, 20, 30, 50, 80, 50);
+    Triangle_all_sides_equal triangle_3(30,50,30,50,60,70);
     Quadrangle quadrangle_0(10, 20, 30, 40, 50, 60, 70, 80);
-    Quadrangle_all_corners_90 quadrangle_1(10, 20);
-    Square quadrangle_2(20);
-    Parallelogramm quadrangle_3(20, 30, 30, 40);
-    Romb quadrangle_4(30, 30, 40);
+    Quadrangle_all_corners_90 quadrangle_1(10, 20, 10, 20, 50,130,50,130);
+    Square quadrangle_2(20,20,20,20,130,50,130,50);
+    Parallelogramm quadrangle_3(20, 30, 20, 30, 80, 100, 80, 100);
+    
 
     Figure** arr_ptr = new Figure * [9];
     arr_ptr[0] = &triangle_0;
@@ -48,7 +65,7 @@ int main()
     for (int i = 0; i < 9; i++) {
         print_info(arr_ptr[i]);
     }
-    delete[]arr_ptr;
+    delete[]arr_ptr;*/
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

@@ -24,6 +24,7 @@
     <ProjectGuid>{397e1468-9a65-437c-b6d6-709f6c12d20a}</ProjectGuid>
     <RootNamespace>cppmhomeworks0603</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>cppm-homeworks-08-02</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,12 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cppm-homeworks-06-03.cpp" />
+    <ClCompile Include="cppm-homeworks-08-02.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="Parallelogramm.cpp" />
     <ClCompile Include="Quadrangle.cpp" />
     <ClCompile Include="Quadrangle_all_corners_90.cpp" />
     <ClCompile Include="Romb.cpp" />
+    <ClCompile Include="FigureExceptions.cpp" />
     <ClCompile Include="Square.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="Triangle_bedra_ravny.cpp" />
@@ -140,6 +142,7 @@
     <ClCompile Include="Triangle_equal_sides.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FigureExceptions.h" />
     <ClInclude Include="Parallelogramm.h" />
     <ClInclude Include="Quadrangle_all_corners_90.h" />
     <ClInclude Include="Romb.h" />
